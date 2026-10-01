@@ -236,7 +236,7 @@ var Raster0 [17]vec4
 var Raster8 [67]vec4
 func Fragment(position vec4,source vec2,color vec4)vec4{
  p:=source-imageSrc0Origin();y:=int(p.y)
- if y>=168 {t:=imageSrc2UnsafeAt(imageSrc2Origin()+vec2(p.x,p.y-168));return Gold[int(clamp(floor(t.r*15+.5),0,15))]*color}
+ if y>=168 {t:=imageSrc2At(imageSrc0Origin()+vec2(p.x,p.y-168));return Gold[int(clamp(floor(t.r*15+.5),0,15))]*color}
  index:=int(clamp(floor(imageSrc0At(source).r*15+.5),0,7))+int(floor(imageSrc1At(source).r*15+.5))
  if index==0&&y>=150{return Raster0[int(clamp(y-150,0,16))]*color}
  if index==8{return Raster8[int(clamp(floor((p.y-2)/2),0,66))]*color}
