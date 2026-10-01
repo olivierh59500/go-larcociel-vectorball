@@ -1,0 +1,6 @@
+{
+  "production": "larcociel-vectorball",
+  "platform": "Atari ST",
+  "ticks_per_second": 50,
+  "decoded_program_sha256": "37b3b4da8911461f480ba137d3292d61db94a954f8fdd345149d492ab25a73a2"
+}

@@ -1,9 +1,37 @@
 # Larcociel Vectorballs Go
 
-A native Go/Ebitengine conversion of **1st Vectorball Demo On The ST**, an Atari ST intro
-by **Larcociel of DMA**, using Demo Construction Kit.
+A Go/Ebitengine conversion of **1st Vectorball Demo On The ST**, an Atari ST
+intro by **Larcociel of DMA**, using Demo Construction Kit **v1.0.13**.
+Graphics are credited to **Grumpy** and music to **David Whittaker**.
 
-The conversion uses the original bitmap artwork, fonts and motion data.
-The Atari ST PAL presentation clock is 50 Hz.
+```sh
+go run ./cmd/vectorball
+go run ./cmd/vectorball -mute
+```
+
+Space or Escape closes the intro. The scene combines the three DMA logos,
+sixteen shaded sphere sprites, fourteen authored object sequences, moving
+palette bands and the original gold font ribbon. The numeric object frames,
+rotation steps, pivots and translation retain the original data. The
+rotation and projection use the original signed word arithmetic. Eight-step
+palette fades separate object changes; the chip soundtrack and ribbon keep
+advancing during the handoff. Simulation uses the Atari ST PAL 50 Hz clock.
+
+DCK supplies retained sprite batches, sound format detection and YM playback.
+The artwork and captured original YM6 soundtrack are embedded. Runtime drawing
+uses no GPU pixel readback. Native presentation data are separate from Go code.
+
+```sh
+go test ./...
+go vet ./...
+go run ./cmd/vectorball -capture captures/preview -frame 150 -frames 1
+go run ./cmd/video
+```
+
+The point test compares sixteen original 68000 coordinates and the rotation
+state after fifty animation steps. A separate test runs two complete object
+cycles. Video export produces a three-minute 640 × 400 H.264/AAC MP4, a PNG
+poster and a JSON report in `recordings/`, using DCK's shared graphics/audio
+clock. The website uses a VP9/Opus WebM copy.
 
 Original production: [Demozoo](https://demozoo.org/productions/151263/).
