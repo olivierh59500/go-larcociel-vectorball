@@ -1,0 +1,3 @@
+*.bin binary
+*.ym binary
+assets/original/message.txt whitespace=-blank-at-eol
