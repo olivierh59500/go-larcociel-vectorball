@@ -4,6 +4,27 @@ A Go/Ebitengine conversion of **1st Vectorball Demo On The ST**, an Atari ST
 intro by **Larcociel of DMA**, using Demo Construction Kit **v1.0.13**.
 Graphics are credited to **Grumpy** and music to **David Whittaker**.
 
+<!-- Project showcase -->
+## Screenshots
+
+[![Colored vectorballs and layered DMA logos above the golden scroller](docs/media/screenshot-1.png)](docs/media/screenshot-1.png)
+
+Colored vectorballs and layered DMA logos above the golden scroller.
+
+## Video
+
+[![Animated preview of Larcociel Vectorballs Go](docs/media/preview.gif)](https://github.com/olivierh59500/go-larcociel-vectorball/raw/refs/heads/main/docs/media/preview.mp4)
+
+**[Watch or download the 24-second MP4 preview with sound](https://github.com/olivierh59500/go-larcociel-vectorball/raw/refs/heads/main/docs/media/preview.mp4)**
+
+This preview is captured from the Go production.
+
+The animated image is silent; the MP4 includes the soundtrack.
+
+<!-- End project showcase -->
+
+## Production notes
+
 ```sh
 go run ./cmd/vectorball
 go run ./cmd/vectorball -mute
